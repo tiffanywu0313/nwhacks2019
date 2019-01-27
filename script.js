@@ -20,19 +20,28 @@ angular.module("app",[])
     var promise = $http.post(url,files[0],config);
     promise.then(function(response){
       $scope.tags=JSON.stringify(response.data.predictions[0].tagName);
-      var tags = JSON.stringify(response.data.predictions[0].tagName);
-      // if (tags == "metal, foil, tin" || tags == "plastic, plastic bottle, plastic container" || tags == "glass, glass bottle, jar"):{
-      //     $scope.category = "Recycables";
-      // }
-      // else if (tags == "plastic bags, styrofoam, waxed paper, non-recyclable, trash"):{
-      //     $scope.category = "Garbage";
-      // }
-      // else if (tags == "organic, food, vegetables, fruit, cooked food, grains, egg shells, bones, dairy, coffee grounds, coffee filters, tea"):{
-      //     $scope.category = "Food Scraps";
-      // }
-      // else if (tags == "cardboard, box" || tags == "paper, newspapers, magazines, envelopes, cup sleeves, cereal boxes, sticky notes, notes, books"):{
-      //     $scope.category == "Paper";
-      // }
+      //$scope.category = JSON.stringify(response.data.predictions[0].tagName);
+      console.log(response.data);
+// switch($scope.tags) {
+//    case "metal, foil, tin":
+//    $scope.category = "Recycables"
+//     break;
+//    case "plastic bags, styrofoam, waxed paper, non-recyclable, trash":
+//    $scope.category = "Garbage"
+//     break;
+// }
+       if (response.data.predictions[0].tagName == "metal, foil, tin" || response.data.predictions[0].tagName == "plastic, plastic bottle, plastic container" || response.data.predictions[0].tagName == "glass, glass bottle, jar"){
+           $scope.category = "Recycables";
+       }
+      else if (response.data.predictions[0].tagName == "plastic bags, styrofoam, waxed paper, non-recyclable, trash"){
+          $scope.category = "Garbage";
+      }
+      else if (response.data.predictions[0].tagName == "organic, food, vegetables, fruit, cooked food, grains, egg shells, bones, dairy, coffee grounds, coffee filters, tea"){
+          $scope.category = "Food Scraps";
+      }
+      else if(response.data.predictions[0].tagName == "cardboard, box"){
+        $scope.category = "Paper";
+       }
     }).catch(function(errorResponse) {
       $scope.result="Error "+errorRespone.status;
     });
