@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="angular.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-app="app" ng-controller="ctrl">
+      <input type="file" return-files ng-model="files">
+      <br>
+      <button ng-disabled="!files" ng-click="upload(files)">
+          Upload file
+      </button>
+      <pre>
+    Name: {{files[0].name}}
+    Type: {{files[0].type}}
+    <!-- Category: {{category}} -->
+    Possible Contents: {{tags}}
+
+  </body>
+
+</html>
