@@ -1,55 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang=”en”>
 <head>
-  <meta charset="utf-8">
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="full-screen" content="yes"/>
-  <meta name="screen-orientation" content="portrait"/>
-  <meta name="viewport" content="user-scalable=no"/>
-  <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Name of your awesome camera app -->
+    <title>Camera App</title>
+    <!-- Link to your main style sheet-->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://connect.facebook.net/en_US/fbinstant.6.2.js"></script>
-  <script type="text/javascript">
-
-    const assets = [
-      'img/asset1.png',
-      'img/asset2.png',
-      'img/asset3.png',
-      'img/asset4.png'
-    ];
-
-    window.onload = function() {
-      $('#info-section').hide();
-
-      // When the window loads, start to initialize the SDK
-      FBInstant.initializeAsync().then(function() {
-
-        // We can start to load assets
-        for (let i in assets) {
-          // When preloading assets, make sure to report the progress
-          FBInstant.setLoadingProgress(i / assets.length * 100);
-        }
-
-        // Now that assets are loaded, call startGameAsync
-        FBInstant.startGameAsync().then(onStart);
-      });
-    };
-
-    function onStart() {
-      // This is called when the user has tapped Play
-      // Information from the SDK can now be accessed
-      $('#photo').attr('src', FBInstant.player.getPhoto());
-      $('#player-name').html(FBInstant.player.getName());
-      $('#player-id').html(FBInstant.player.getID());
-      $('#context-type').html(FBInstant.context.getType());
-
-      $('#info-section').show();
-    }
-  </script>
-
-  <p> Not WORKING Right now</p>
+    <!-- Camera -->
+    <main id="camera">
+        <!-- Camera sensor -->
+        <canvas id="camera--sensor"></canvas>
+        <!-- Camera view -->
+        <video id="camera--view" autoplay playsinline></video>
+        <!-- Camera output -->
+        <img src="//:0" alt="" id="camera--output">
+        <!-- Camera trigger -->
+        <button id="camera--trigger">Take a picture</button>
+    </main>
+    <!-- Reference to your JavaScript file -->
+    <script src="app.js"></script>
 </body>
 </html>
