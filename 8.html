@@ -14,11 +14,12 @@
 	<form action='' method='post' name='myform'>
         <input type='file' id='iptfileupload' onchange='show()' value='' accept="image/*" capture="camera" />
         <br>please upload a photo<br>
-        <img src='1.jpg' 
+        
+    </form>
+    <img src='1.jpg' 
         onload='if (this.width>400 || this.height>600) if (this.width/this.height>2/3) this.width=400; else this.height=600;' 
         onclick="picture_rotate(this)"
         alt='' id='img'/>
-    </form>
     <script type="text/javascript">
 
 
