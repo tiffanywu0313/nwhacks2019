@@ -4,21 +4,16 @@
 <meta charset="utf-8">
 <meta name='viewport' conent='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' />
 <meta name="keywords" content="Upload Photo" />
-<meta name="description" content="Upload Photo And Display" />
+<meta name="description" content="Upload Photo And Display"/>
 <title>Upload Photo And Display</title>
-<style type='text/css' rel='stylesheet'>
-
-	*{ margin:0; padding:0;}
-	ul{ width:45%; border:solid 3px skyBlue; float:left; }
-	ul li{ border-bottom:solid 1px gray ; list-style:inside decimal;}
-	ul li:hover{background:lightGray;}
-	
-</style>
+<link href="./camera.css" rel="stylesheet" type="text/css"/>
 </head>
+
+
 <body>
 	<form action='' method='post' name='myform'>
 		<input type='file' id='iptfileupload' onchange='show()' value='' accept="image/*" capture="camera" />
-		<img src='1.jpg' alt='' id='img' />
+		<img src='1.jpg' alt='' id='img'/>
     </form>
     <input name="btnClick" type="button" id="btnClick" value="Judge"/>
     <script type="text/javascript">
@@ -58,7 +53,7 @@
         function getPath(obj,fileQuery,transImg) {
             var imgSrc = '', imgArr = [], strSrc = '' ;
 
-            if(window.navigator.userAgent.indexOf("MSIE")>=1){  // IE浏览器判断
+            if(window.navigator.userAgent.indexOf("MSIE")>=1){
                 if(obj.select){
                     obj.select();
                     var path=document.selection.createRange().text;
@@ -120,7 +115,6 @@
         }
 
         function show(){
-            //以下即为完整客户端路径
             var file_img=document.getElementById("img"),
                 iptfileupload = document.getElementById('iptfileupload') ;
             getPath(file_img,iptfileupload,file_img) ;

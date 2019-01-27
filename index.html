@@ -1,13 +1,5 @@
-<!--
-  Copyright (c) 2017-present, Facebook, Inc.
-  All rights reserved.
-
-  This source code is licensed under the license found in the
-  LICENSE file in the root directory of this source tree.
--->
-
 <!DOCTYPE html>
-<html>
+<html lang = "en" dir = "ltr">
 <head>
   <meta charset="utf-8">
   <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -23,7 +15,7 @@
   <script type="text/javascript">
 
     window.onload = function() {
-      $('#button-section').hide();
+      //$('#button-section').hide();
 
       // When the window loads, start to initialize the SDK
       FBInstant.initializeAsync().then(function() {
@@ -39,26 +31,25 @@
       $('#player-name').html(FBInstant.player.getName());
       $('#player-id').html(FBInstant.player.getID());
       $('#context-type').html(FBInstant.context.getType());
-
-      $('#button-section').show();
+      //$('#button-section').show();
     }
   </script>
 
   <header>
     <h1>Welcome to Zero Waste</h1>
-    <img src="logo.png" alt="logo" style="width:320px;height:320px;">
+    <img src="logo.png" alt="logo">
   </header>
 
-  <div id="button-section">
-    <div class = button1>
-    <p><a id = "Tutorial" href="./2.html">Tutorial</a></p>
-    </div>
-    <div class = button2>
-    <p><a id = "Learn" href="./8.html">Learn</a></p>
-    </div>
-    <div class = button3>
-    <p><a id = "Track" href="./12.html">Track</a></p>
-    </div>>
+
+  <div class = Button>
+    <p><a id="Tutorial" href="./2.html">Tutorial</a></p>
+   </div>
+  <div class = Button>
+    <p><a id="Learn" href="./8.html">Learn</a></p>
   </div>
+  <div class = Button>
+    <p><a id="Track" href="./12.html">Track</a></p>
+  </div>
+
 </body>
 </html>

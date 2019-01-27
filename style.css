@@ -11,70 +11,99 @@ body{
     font-family: 'Comic Sans MS';
     text-align: center;
 }
-  .taken{
-      height: 100px!important;
-      width: 100px!important;
-      transition: all 0.5s ease-in;
-      border: solid 3px white;
-      box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
-      top: 20px;
-      right: 20px;
-      z-index: 2;
-  }
  
  h1 {
   color: green;
-  }
+ }
 
-#button1 {
+.Button{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.Home{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.Back{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.Description{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+#Tutorial {
     text-decoration: none;
     font-size: 30px;
     border: black 2px solid;
     color: black;
     padding: 10px;
+    border-radius: 30%
 }
 
-#button2 {
+#Learn {
     text-decoration: none;
     font-size: 30px;
     border: black 2px solid;
     color: black;
     padding: 10px;
+    border-radius: 30%
 }
 
-#button3 {
+#Track {
     text-decoration: none;
     font-size: 30px;
     border: black 2px solid;
     color: black;
     padding: 10px;
+    border-radius: 30%
 }
 
-#back {
+#Back {
     text-decoration: none;
     font-size: 30px;
     border: black 2px solid;
     color: black;
     padding: 10px;
+    border-radius: 30%
 }
 
-#button1:hover {
+#Home {
+    text-decoration: none;
+    font-size: 30px;
+    border: black 2px solid;
+    color: black;
+    padding: 10px;
+    border-radius: 30%
+}
+
+#Tutorial:hover {
     color: white;
     border-color: white;
 }
 
-#button2:hover {
+#Learn:hover {
     color: white;
     border-color: white;
 }
 
 
-#button3:hover {
+#Track:hover {
     color: white;
     border-color: white;
 }
 
-#back:hover {
+#Back:hover {
+    color: white;
+    border-color: white;
+}
+
+#Home:hover {
     color: white;
     border-color: white;
 }
