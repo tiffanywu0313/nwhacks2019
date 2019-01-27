@@ -1,5 +1,5 @@
 {
-	"FB_appId":"<YOUR_APP_ID_HERE>",
+	"FB_appId":"<2030446540324163>",
 	"FB_uploadAccessToken": "<YOUR_UPLOAD_TOKEN_HERE>",
 	"outputFolder": "./build",
 	"archivesFolder": "./archives",
