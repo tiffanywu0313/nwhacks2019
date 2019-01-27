@@ -22,24 +22,11 @@
   <script src="https://connect.facebook.net/en_US/fbinstant.6.2.js"></script>
   <script type="text/javascript">
 
-    const assets = [
-      'img/asset1.png',
-      'img/asset2.png',
-      'img/asset3.png',
-      'img/asset4.png'
-    ];
-
     window.onload = function() {
       $('#button-section').hide();
 
       // When the window loads, start to initialize the SDK
       FBInstant.initializeAsync().then(function() {
-
-        // We can start to load assets
-        for (let i in assets) {
-          // When preloading assets, make sure to report the progress
-          FBInstant.setLoadingProgress(i / assets.length * 100);
-        }
 
         // Now that assets are loaded, call startGameAsync
         FBInstant.startGameAsync().then(onStart);
@@ -49,7 +36,6 @@
     function onStart() {
       // This is called when the user has tapped Play
       // Information from the SDK can now be accessed
-      $('#photo').attr('src', FBInstant.player.getPhoto());
       $('#player-name').html(FBInstant.player.getName());
       $('#player-id').html(FBInstant.player.getID());
       $('#context-type').html(FBInstant.context.getType());
@@ -59,16 +45,17 @@
   </script>
 
   <header>
-    <h1>Home Page</h1>
-    <h2>Welcome to our App</h2>
+    <h1>Welcome to Zero Waste</h1>
+    <img src="logo.png" alt="logo" style="width:320px;height:320px;">
   </header>
 
   <div id="button-section">
+
     <p><a href="./2.html">Tutorial</a></p>
 
-    <p><a href="./7.html">Scan</a></p>
+    <p><a href="./8.html">Learn</a></p>
 
-    <p><a href="./12.html">Tracker</a></p>
+    <p><a href="./12.html">Track</a></p>
 
   </div>
 </body>

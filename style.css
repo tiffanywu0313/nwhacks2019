@@ -6,9 +6,10 @@ html{
   }
 
 body{
-    background-image: url("blue.png");
+    background-image: url("drop.png");
+    height: 100%;
     background-color: white;
-    font-family: 'Noto Sans TC';
+    font-family: 'Comic Sans MS';
     text-align: center;
 }
   .taken{
@@ -20,4 +21,8 @@ body{
       top: 20px;
       right: 20px;
       z-index: 2;
+  }
+ 
+ h1 {
+  color: green;
   }
