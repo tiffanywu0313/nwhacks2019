@@ -19,10 +19,43 @@
 	<form action='' method='post' name='myform'>
 		<input type='file' id='iptfileupload' onchange='show()' value='' accept="image/*" capture="camera" />
 		<img src='1.jpg' alt='' id='img' />
-	</form>
-	<script type="text/javascript">
+    </form>
+    <input name="btnClick" type="button" id="btnClick" value="Judge"/>
+    <script type="text/javascript">
+        function $(id){return document.getElementById(id);}
+        $("btnClick").onclick = function (){
+            // result = function(file) => model() 
+            // switch(result)
+            var button = document.createElement("button");
+            button.innerHTML = "Metal";
+            var button2 = document.createElement("button");
+            button2.innerHTML = "Plastic";
+            var button3 = document.createElement("button");
+            button3.innerHTML = "Paper";
+            var button4 = document.createElement("button");
+            button4.innerHTML = "Organic";
+            // 2. Append somewhere
+            var body = document.getElementsByTagName("body")[0];
+            body.appendChild(button);
+            body.appendChild(button2);
+            body.appendChild(button3);
+            body.appendChild(button4);
+            // 3. Add event handler
+            button.addEventListener ("click", function() {
+                window.location.href="./9.html";
+            });
+            button2.addEventListener ("click", function() {
+            alert("did something");
+            });
+            button3.addEventListener ("click", function() {
+            alert("did something");
+            });
+            button4.addEventListener ("click", function() {
+            alert("did something");
+            });
+            this.onclick = null;
+        }
         function getPath(obj,fileQuery,transImg) {
-
             var imgSrc = '', imgArr = [], strSrc = '' ;
 
             if(window.navigator.userAgent.indexOf("MSIE")>=1){  // IE浏览器判断
@@ -92,6 +125,8 @@
                 iptfileupload = document.getElementById('iptfileupload') ;
             getPath(file_img,iptfileupload,file_img) ;
         }
+    
+
     </script>
 
 </body>
